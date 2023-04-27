@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/utilityFunctions.js"></script>
+    <script src="js/validateContact.js"></script>
+    <link rel="stylesheet" type="text/css" href="p3formstyles.css" />
+    <title>Contact</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="images/logo.jpg" id="logo" alt="logo"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="p3form.html">Shoes in Stock</a></li>
+            <li><a href="#">What's New</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <h1 id="contactH1">Contact Us</h1>
+    <form id="formList" action="/" method="post" onsubmit="return validateContact()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <span class="error" id="name-error">Please enter your name</span>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        <span class="error" id="phone-error">Please enter a 10-digit phone number</span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error" id="email-error">Please enter a valid email address</span>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" required></textarea>
+        <span class="error" id="comments-error">Please enter your comments</span>
+        <br>
+        <input type="submit" class="submit-btn" value="Submit">
+        <input type="reset" class="submit-btn" value="Reset">
+    </form>
+
+    <footer id="footer">
+        <div id="footer-container">
+            <ul>
+                <li><a href="#">Accessibility</a></li>
+                <li><a href="#">Disclaimer</a></li>
+                <li><a href="#">Copyright</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#">Site Map</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
